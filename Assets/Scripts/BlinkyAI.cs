@@ -52,35 +52,41 @@ public class BlinkyAI : MonoBehaviour {
             Vector3 b = new Vector3(col.gameObject.transform.position.x, 0, col.gameObject.transform.position.z);
 
             //make sure we are almost centered with the intersection before making a decision
-            if (Vector3.SqrMagnitude(a - b) < 0.0002f) {
-                //decide the direction to go
+            if (Vector3.SqrMagnitude(a - b) < 0.0004f) {
+				//get the distances to pacman
+				float left = col.gameObject.GetComponent<Intersection>().Left ? (Vector3.Distance(new Vector3(this.transform.position.x - 0.3757539f, 0, this.transform.position.z), new Vector3(Pacman.transform.position.x, 0, Pacman.transform.position.z))) : 99999f;
+				float right = col.gameObject.GetComponent<Intersection>().Right ? (Vector3.Distance(new Vector3(this.transform.position.x + 0.3757539f, 0, this.transform.position.z), new Vector3(Pacman.transform.position.x, 0, Pacman.transform.position.z))) : 99999f;
+				float up = col.gameObject.GetComponent<Intersection>().Up ? (Vector3.Distance(new Vector3(this.transform.position.x, 0, this.transform.position.z + 0.3757539f), new Vector3(Pacman.transform.position.x, 0, Pacman.transform.position.z))) : 99999f;
+				float down = col.gameObject.GetComponent<Intersection>().Down ? (Vector3.Distance(new Vector3(this.transform.position.x, 0, this.transform.position.z - 0.3757539f), new Vector3(Pacman.transform.position.x, 0, Pacman.transform.position.z))) : 99999f;
 
-                //calculate z distance to pacman
-                float z = Mathf.Abs(this.gameObject.transform.position.z - Pacman.gameObject.transform.position.z);
+				//find the minimum distance
+				float min = Mathf.Min(left, right, up, down);
 
-                //calculate x distance to pacman
-                float x = Mathf.Abs(this.gameObject.transform.position.x - Pacman.gameObject.transform.position.x);
-
-                //find the minimum between the two
-                float min = Mathf.Max(x, z);
-
-                if (min == x) {
-                    if (this.gameObject.transform.position.x - Pacman.gameObject.transform.position.x < 0) {
-                        //go left
-                        movingDirection = 1;
-                    } else {
-                        //go right
-                        movingDirection = 2;
-                    }
-                } else {
-                    if (this.gameObject.transform.position.z - Pacman.gameObject.transform.position.z < 0) {
-                        //go up
-                        movingDirection = 3;
-                    } else {
-                        //go down
-                        movingDirection = 4;
-                    }
-                }
+				if (movingDirection == 1) {
+					if (min == down) {
+						movingDirection = 4;
+					} else if (min == up) {
+						movingDirection = 3;
+					}
+				} else if (movingDirection == 2) {
+					if (min == down) {
+						movingDirection = 4;
+					} else if (min == up) {
+						movingDirection = 3;
+					}
+				} else if (movingDirection == 3) {
+					if (min == left) {
+						movingDirection = 1;
+					} else if (min == right) {
+						movingDirection = 2;
+					}
+				} else if (movingDirection == 4) {
+					if (min == left) {
+						movingDirection = 1;
+					} else if (min == right) {
+						movingDirection = 2;
+					}
+				}
             }
         }
     }
