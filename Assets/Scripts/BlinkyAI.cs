@@ -54,10 +54,10 @@ public class BlinkyAI : MonoBehaviour {
             //make sure we are almost centered with the intersection before making a decision
             if (Vector3.SqrMagnitude(a - b) < 0.0004f) {
 				//get the distances to pacman
-				float left = col.gameObject.GetComponent<Intersection>().Left ? (Vector3.Distance(new Vector3(this.transform.position.x - 0.3757539f, 0, this.transform.position.z), new Vector3(Pacman.transform.position.x, 0, Pacman.transform.position.z))) : 99999f;
-				float right = col.gameObject.GetComponent<Intersection>().Right ? (Vector3.Distance(new Vector3(this.transform.position.x + 0.3757539f, 0, this.transform.position.z), new Vector3(Pacman.transform.position.x, 0, Pacman.transform.position.z))) : 99999f;
-				float up = col.gameObject.GetComponent<Intersection>().Up ? (Vector3.Distance(new Vector3(this.transform.position.x, 0, this.transform.position.z + 0.3757539f), new Vector3(Pacman.transform.position.x, 0, Pacman.transform.position.z))) : 99999f;
-				float down = col.gameObject.GetComponent<Intersection>().Down ? (Vector3.Distance(new Vector3(this.transform.position.x, 0, this.transform.position.z - 0.3757539f), new Vector3(Pacman.transform.position.x, 0, Pacman.transform.position.z))) : 99999f;
+				float left = col.gameObject.GetComponent<Intersection>().Left ? Mathf.Abs(Vector3.Distance(new Vector3(this.transform.position.x - 0.3757539f, 0, this.transform.position.z), new Vector3(Pacman.transform.position.x, 0, Pacman.transform.position.z))) : 99999f;
+				float right = col.gameObject.GetComponent<Intersection>().Right ? Mathf.Abs(Vector3.Distance(new Vector3(this.transform.position.x + 0.3757539f, 0, this.transform.position.z), new Vector3(Pacman.transform.position.x, 0, Pacman.transform.position.z))) : 99999f;
+				float up = col.gameObject.GetComponent<Intersection>().Up ? Mathf.Abs(Vector3.Distance(new Vector3(this.transform.position.x, 0, this.transform.position.z + 0.3757539f), new Vector3(Pacman.transform.position.x, 0, Pacman.transform.position.z))) : 99999f;
+				float down = col.gameObject.GetComponent<Intersection>().Down ? Mathf.Abs(Vector3.Distance(new Vector3(this.transform.position.x, 0, this.transform.position.z - 0.3757539f), new Vector3(Pacman.transform.position.x, 0, Pacman.transform.position.z))) : 99999f;
 
 				//find the minimum distance
 				float min = Mathf.Min(left, right, up, down);
