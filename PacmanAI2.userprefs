@@ -1,9 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BlinkyAI.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MovementAI.cs">
     <Files>
-      <File FileName="Assets\Scripts\BlinkyAI.cs" Line="11" Column="37" />
-      <File FileName="Assets\Scripts\PacmanAI.cs" Line="15" Column="62" />
+      <File FileName="Assets\Scripts\PacmanAI.cs" Line="9" Column="32" />
+      <File FileName="Assets\Scripts\Intersection.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PinkyBehavior.cs" Line="26" Column="43" />
+      <File FileName="Assets\Scripts\BlinkyBehavior.cs" Line="10" Column="28" />
+      <File FileName="Assets\Scripts\ClydeBehavior.cs" Line="18" Column="1" />
+      <File FileName="Assets\Scripts\InkyBehavior.cs" Line="7" Column="26" />
+      <File FileName="Assets\Scripts\MovementAI.cs" Line="7" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

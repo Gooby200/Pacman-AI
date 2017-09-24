@@ -52,10 +52,14 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\NewBehaviourScript.cs" />
-     <Compile Include="Assets\Scripts\BlinkyAI.cs" />
+     <Compile Include="Assets\Scripts\BlinkyBehavior.cs" />
+     <Compile Include="Assets\Scripts\ClydeBehavior.cs" />
      <Compile Include="Assets\Scripts\CollisionDetection.cs" />
+     <Compile Include="Assets\Scripts\InkyBehavior.cs" />
      <Compile Include="Assets\Scripts\Intersection.cs" />
+     <Compile Include="Assets\Scripts\MovementAI.cs" />
      <Compile Include="Assets\Scripts\PacmanAI.cs" />
+     <Compile Include="Assets\Scripts\PinkyBehavior.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>C:/Users/Gaston/Documents/Unity Projects/PacmanAI2/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
