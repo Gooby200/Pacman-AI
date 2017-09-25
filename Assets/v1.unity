@@ -2818,6 +2818,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4331790499801168, guid: 49118beda46e1804bbc41789f1bd67de, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4331790499801168, guid: 49118beda46e1804bbc41789f1bd67de, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4331790499801168, guid: 49118beda46e1804bbc41789f1bd67de, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49118beda46e1804bbc41789f1bd67de, type: 2}
   m_IsPrefabParent: 0
@@ -2850,7 +2862,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4923063068994208, guid: dfb6225fa96b43a4097236be11bdea25, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.62
+      value: 3.37
       objectReference: {fileID: 0}
     - target: {fileID: 4923063068994208, guid: dfb6225fa96b43a4097236be11bdea25, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3137,6 +3149,22 @@ MonoBehaviour:
   Right: 1
   Up: 1
   Down: 0
+--- !u!1 &1812620693 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1358431084655200, guid: 49118beda46e1804bbc41789f1bd67de,
+    type: 2}
+  m_PrefabInternal: {fileID: 1337990622}
+--- !u!114 &1812620694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1812620693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 433b6bc081fc30a4caa40382be0d3fbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1817963692 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1015167937190762, guid: f42e659f7570aa544989b5fcbabd0e0d,
@@ -3438,9 +3466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12f0ccf38d7d71f498a622ae529d0513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FacingPosition: {x: 0, y: 0, z: 0}
   FacingDirection: 3
-  MovingDirection: 3
 --- !u!1 &2071566567 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1124389413505700, guid: f42e659f7570aa544989b5fcbabd0e0d,

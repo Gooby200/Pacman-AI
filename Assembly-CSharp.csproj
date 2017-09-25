@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\CollisionDetection.cs" />
      <Compile Include="Assets\Scripts\InkyBehavior.cs" />
      <Compile Include="Assets\Scripts\Intersection.cs" />
+     <Compile Include="Assets\Scripts\MDP.cs" />
      <Compile Include="Assets\Scripts\MovementAI.cs" />
      <Compile Include="Assets\Scripts\PacmanAI.cs" />
      <Compile Include="Assets\Scripts\PinkyBehavior.cs" />
